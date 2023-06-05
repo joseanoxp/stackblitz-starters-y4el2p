@@ -21,7 +21,10 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-
+    
+    - name: Deploy GitHub Pages site
+      uses: actions/deploy-pages@v2.0.1
+      
     - name: Build
       run: |
         npm install
